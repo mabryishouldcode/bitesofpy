@@ -1,2 +1,2 @@
 # bitesofpy
-PyBites - Bites of Py Exercises
+Dump site for 🐍PyBit.es code challenges completed.
