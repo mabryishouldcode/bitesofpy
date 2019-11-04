@@ -3,6 +3,7 @@
 # ################################
 
 #_HINTS_
+# enumerate, string formatting
 
 #_DESCRIPTION_
 
@@ -26,9 +27,16 @@
 
 # Good luck and keep calm and code in Python!
 
+formatted_records = []
+
 names = 'Julian Bob PyBites Dante Martin Rodolfo'.split()
 countries = 'Australia Spain Global Argentina USA Mexico'.split()
 
+# just in case
+fixed_width = 11
+
+# map names/countries
+name_map = dict(zip(names, countries))
 
 def enumerate_names_countries():
     """Outputs:
@@ -38,7 +46,28 @@ def enumerate_names_countries():
        4. Dante      Argentina
        5. Martin     USA
        6. Rodolfo    Mexico"""
-    pass
+    
+    # return first column formatting
+    # (ex: '1. Julian') 
+    for count, name in enumerate(name_map, start=1):
+        # return first column formatting
+        # (ex: '1. Julian') 
+        first_column = str(count) + '. ' + name
+
+        # get number of spaces
+        spaces = fixed_width - len(name)
+    
+        # append that many spaces and store in first_column_space add countries
+        first_column += ' ' * spaces + countries[count-1]
+        # print(first_column)
+
+        # formatted_record = list(first_column.append())
+        formatted_records.append(first_column)
+    
+    return formatted_records
+
+
+print(enumerate_names_countries())
 
 
 
