@@ -59,15 +59,15 @@ def enumerate_names_countries():
     
         # append that many spaces and store in first_column_space add countries
         first_column += ' ' * spaces + countries[count-1]
-        # print(first_column)
+        print(first_column)
 
-        # formatted_record = list(first_column.append())
-        formatted_records.append(first_column)
+        # add to formatted_records
+        # formatted_records.append(first_column)
     
-    return formatted_records
+    # return formatted_records
 
 
-print(enumerate_names_countries())
+enumerate_names_countries()
 
 
 
