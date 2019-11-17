@@ -17,14 +17,36 @@
 # We will revisit this in an intermediate challenge. Have fun!
 
 from datetime import datetime
+from datetime import timedelta
 
-PYBITES_BORN = datetime(year=2016, month=12, day=19)
+# dynamic date
+# add 100 days to date and store new value
 
-# get used to datetime module
+def gen_special_pybites_dates():
+    PYBITES_BORN = datetime(year=2016, month=12, day=19)
+    # start = PYBITES_BORN
+    start = PYBITES_BORN
+    hundred_days = datetime(year=2016, month=12, day=19)
+    year = datetime(year=2016, month=12, day=19)
+    stop = datetime(year=2019, month=2, day=28)
+    #   
 
+    # start = 12.19.2016, until = 2.28.2019
+    while start != stop:
+        # daycount
+        # 12.19.2016, add 1 day
+        start += timedelta(days=1)
 
-# def gen_special_pybites_dates():
-    #pass
+        if start == hundred_days + timedelta(days=100):
+            yield start
+            hundred_days += timedelta(days=100)
+
+        if start == year + timedelta(days=365):
+            yield start
+            year += timedelta(days=365)
+
+# gen = gen_special_pybites_dates()
+# print(list(gen))
 
 ############################################################################
 # _TESTS_

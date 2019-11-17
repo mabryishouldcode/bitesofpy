@@ -21,14 +21,25 @@ NOW = datetime.now()
 
 class Promo:
 
-    def __init__(self, name):
+    def __init__(self, name, deadline):
         self.name = name
-
+        self.deadline = deadline
+    
+    @property
     def expired(self):
-        if NOW > NOW - timedelta(seconds=1):
+        if NOW > self.deadline:
             return True
         else:
             return False
+
+
+
+# print(coupon.deadline)
+# print(coupon.expired())
+
+# print(NOW > past_time)
+# print(NOW < future_date)
+
 
 # _TESTS_
 #####################################################################
