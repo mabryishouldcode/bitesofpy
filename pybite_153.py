@@ -1,6 +1,6 @@
-# #####################################
-# Bite 153. Round a sequence of numbers
-# #####################################
+# ######################################
+# Bite 153 - Round a sequence of numbers
+# ######################################
 
 # _HINTS_
 # list comprehensions, math, rounding
